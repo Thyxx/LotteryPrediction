@@ -12,7 +12,7 @@ pip install -r requirements.txt
 
 ## Initialisation de la base de données
 
-Au premier lancement, l'application crée automatiquement une base SQLite dans `data/lottery.db`. Cliquez sur « Mettre à jour les données » depuis l'interface ou exécutez le script suivant pour télécharger l'historique complet (fichiers officiels XLSX/CSV) :
+Au premier lancement, l'application crée automatiquement une base SQLite dans `data/lottery.db`. Cliquez sur « Mettre à jour les données » depuis l'interface ou exécutez le script suivant pour télécharger l'historique complet :
 
 ```bash
 python -m app.scripts.update_data

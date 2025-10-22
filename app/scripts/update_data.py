@@ -1,16 +1,13 @@
 from __future__ import annotations
 
 from app.database import get_session
-from app.data_fetcher import FetchError, update_all_draws
+from app.data_fetcher import update_all_draws
 
 
 def main() -> None:
     session = get_session()
     try:
-        try:
-            results = update_all_draws(session)
-        except FetchError as exc:
-            raise SystemExit(str(exc))
+        results = update_all_draws(session)
     finally:
         session.close()
     print(
